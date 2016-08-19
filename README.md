@@ -15,7 +15,7 @@ You can pull it with:
 
 You can also find other images based on different Centos / JDK releases, using different tags in the following form:
 
-    docker pull mcapitanio/centos-java:[*centos-release*]-[*jdk-release*]
+    docker pull mcapitanio/centos-java:[centos-release]-[jdk-release]
 
 For example, if you want a Centos 6 release with Oracle JDK release 8u20 you can pull the image with:
 

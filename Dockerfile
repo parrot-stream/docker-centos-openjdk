@@ -4,57 +4,26 @@ MAINTAINER Matteo Capitanio <matteo.capitanio@gmail.com>
 
 USER root
 
-#ENV http_proxy http://10.0.2.2:3128
-#ENV https_proxy http://10.0.2.2:3128
+# Enable proxy settings in the container, assuming that the Host is a Linux VirtualBox
+# with cntlm running on port 3128 on the default ip 10.0.2.2 (you have to change if different)
+# ENV http_proxy http://10.0.2.2:3128
+# ENV https_proxy http://10.0.2.2:3128
 
+ENV JAVA_VER 8u102
+ENV JAVA_HOME /opt/jdk1.8.0_102
 
-ENV HADOOP_VER 2.7.2
-ENV JAVA_VER 7u80
-ENV JAVA_HOME /opt/jdk1.7.0_80
-ENV HADOOP_HOME /opt/hadoop
-ENV HADOOP_PREFIX $HADOOP_HOME
-ENV HADOOP_COMMON_HOME $HADOOP_HOME
-ENV HADOOP_COMMON_LIB_NATIVE $HADOOP_PREFIX/lib/native
-ENV HADOOP_CONF_DIR $HADOOP_PREFIX/etc/hadoop
-ENV YARN_CONF_DIR $HADOOP_CONF_DIR
+ENV PATH $JAVA_HOME/bin:$PATH
 
-ENV PATH $JAVA_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$PATH
-
-# Install needed packages
-RUN yum install -y deltarpm
+# Install Packages
 RUN yum update -y; yum clean all
-RUN yum install -y wget rsync which openssh-clients openssh-server python-setuptools
-RUN easy_install supervisor
-
-ADD ./etc /etc
+RUN yum install -y wget
 
 WORKDIR /opt/docker
 
 # Oracle Java
-COPY install-java.sh .
-RUN chmod +x install-java.sh; \
-    ./install-java.sh
+RUN wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/$JAVA_VER-b12/jdk-$JAVA_VER-linux-x64.tar.gz"
+RUN tar -xvf  jdk-$JAVA_VER-linux-x64.tar.gz -C ..
+RUN alternatives --install /usr/bin/java java $JAVA_HOME/bin/java 2
+RUN alternatives --set java $JAVA_HOME/bin/java
 
-# Apache Hadoop
-COPY ./hadoop-$HADOOP_VER ./hadoop-$HADOOP_VER
-COPY install-hadoop.sh .
-RUN chmod +x install-hadoop.sh; \
-    ./install-hadoop.sh
-
-#COPY docker-entrypoint.sh $HADOOP_HOME/bin
-#RUN chmod +x $HADOOP_HOME/bin/docker-entrypoint.sh
-
-# Hdfs ports
-EXPOSE 50010 50020 50070 50075 50090
-# Mapred ports
-EXPOSE 19888
-#Yarn ports
-EXPOSE 8030 8031 8032 8033 8040 8042 8088
-#Other ports
-EXPOSE 49707 22 
-
-VOLUME ["/hdfs"]
-
-COPY bootstrap.sh $HADOOP_HOME/bin
-
-ENTRYPOINT ["supervisord", "-n"]
+CMD ["/bin/bash"]

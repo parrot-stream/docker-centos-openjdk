@@ -4,36 +4,37 @@ ___
 ### Description
 ___
 
-This image runs the official [*Apache Hadoop*](http://hadoop.apache.org/) in a **pseudo distributed** mode.
+This image adds Oracle Java Developmt Kit to a base [**Centos**](https://hub.docker.com/r/centos/centos/) Linux distribution.
 
-The *latest* tag of this image is build with the [last stable](http://hadoop.apache.org/releases.html) release of Apache Hadoop.
+It is based on the official [**centos**](https://hub.docker.com/r/centos/systemd/) image and built with a Docker Hub automated build.
 
+The *latest* tag of this image is build using the last available Centos Docker image and the last available Oracle JDK.
 You can pull it with:
 
-    docker pull mcapitanio/hadoop
+    docker pull mcapitanio/centos-java
 
 
-You can also find other images based on different Apache Hadoop releases, using a different tag in the following form:
+You can also find other images based on different Centos / JDK releases, using different tags in the following form:
 
-    docker pull mcapitanio/hadoop:[hadoop-release]
+    docker pull mcapitanio/centos-java:[centos-release]-[jdk-release]
 
 
-For example, if you want Apache Hadoop release 2.6.4 you can pull the image with:
+For example, if you want a Centos 6 release with Oracle JDK release 8u20 you can pull the image with:
 
-    docker pull mcapitanio/hadoop:2.6.4
+    docker pull mcapitanio/centos-java:6-8u20
 
 
 Run with Docker Compose:
 
-    docker-compose run hadoop
+    docker-compose run centos-java java -version
 
 
 Run with Docker run:
 
-    docker run mcapitanio/hadoop
+    docker run mcapitanio/centos-java java -version
 
 
 Available tags:
 
-- Apache Hadoop 2.7.2 (2.7.2, [latest](https://github.com/mcapitanio/docker-hadoop/blob/latest/Dockerfile))
-- Apache Hadoop 2.6.4 ([2.6.4](https://github.com/mcapitanio/docker-hadoop/blob/2.6.4/Dockerfile))
+- Centos 7, Java 8u102 (7-8u102, [latest](https://github.com/mcapitanio/docker-centos-java/blob/latest/Dockerfile))
+- Centos 7, Java 7u80 ([7-7u80](https://github.com/mcapitanio/docker-centos-java/blob/7-7u80/Dockerfile))

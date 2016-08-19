@@ -7,4 +7,4 @@ services:
         build:
             context: .
             dockerfile: Dockerfile.proxy
-        image: mcapitanio/centos-java:7-7u80
+        image: mcapitanio/centos-java

@@ -6,8 +6,8 @@ USER root
 
 # Enable proxy settings in the container, assuming that the Host is a Linux VirtualBox
 # with cntlm running on port 3128 on the default ip 10.0.2.2 (you have to change if different)
-ENV unset http_proxy
-ENV unset https_proxy
+ENV set http_proxy ""
+ENV set https_proxy ""
 
 ENV JAVA_VER 8u102
 ENV JAVA_HOME /opt/jdk1.8.0_102

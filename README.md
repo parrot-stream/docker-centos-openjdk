@@ -6,8 +6,6 @@ ___
 
 This image adds Oracle Java Developmt Kit to a base [**Centos**](https://hub.docker.com/r/centos/centos/) Linux distribution.
 
-It is based on the official [**centos**](https://hub.docker.com/r/centos/systemd/) image and built with a Docker Hub automated build.
-
 The *latest* tag of this image is build using the last available Centos Docker image and the last available Oracle JDK.
 You can pull it with:
 

@@ -1,0 +1,9 @@
+version: "2"
+
+services:
+
+     centos-java:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: mcapitanio/centos-java

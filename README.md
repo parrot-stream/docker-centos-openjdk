@@ -2,7 +2,6 @@
 ___
 
 ### Description
-___
 
 This image adds Oracle Java Developmt Kit to a base [**Centos**](https://hub.docker.com/r/centos/centos/) Linux distribution.
 

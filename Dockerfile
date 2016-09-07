@@ -15,8 +15,10 @@ ENV no_proxy ${no_proxy}
 ENV PATH $JAVA_HOME/bin:$PATH
 
 # Install Packages
-RUN yum update -y; yum clean all
-RUN yum install -y wget
+RUN yum clean all; \
+    yum update -y; 
+    yum install -y wget; \
+    yum clean all
 
 WORKDIR /opt/docker
 

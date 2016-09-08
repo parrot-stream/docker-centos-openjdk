@@ -16,7 +16,7 @@ ENV PATH $JAVA_HOME/bin:$PATH
 
 # Install Packages
 RUN yum clean all; \
-    yum update -y; 
+    yum update -y; \
     yum install -y wget; \
     yum clean all
 

@@ -4,9 +4,9 @@ MAINTAINER Matteo Capitanio <matteo.capitanio@gmail.com>
 
 USER root
 
-ENV JAVA_VER 8u102
-ENV JAVA_HOME /opt/jdk1.8.0_102
-ENV JAVA_BUILD 12
+ENV JAVA_VER 8u112
+ENV JAVA_HOME /opt/jdk1.8.0_112
+ENV JAVA_BUILD 15
 
 ENV http_proxy ${http_proxy}
 ENV https_proxy ${https_proxy}

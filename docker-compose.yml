@@ -1,4 +1,4 @@
-version: "2"
+version: "3"
 
 services:
 
@@ -7,4 +7,4 @@ services:
         build:
             context: .
             dockerfile: Dockerfile
-        image: mcapitanio/centos-java
+        image: parrotcdc/centos-java

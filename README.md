@@ -3,7 +3,7 @@ ___
 
 ### Description
 
-This image adds OpenJDK to a base [**Centos**](https://hub.docker.com/r/centos/centos/) Linux distribution.
+This image adds [OpenJDK](http://openjdk.java.net/) to a base [**Centos**](https://hub.docker.com/r/centos/centos/) Linux distribution.
 
 The *latest* tag of this image is build using the last available Centos Docker image and the last available Oracle JDK.
 You can pull it with:

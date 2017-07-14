@@ -8,10 +8,6 @@ ENV JAVA_VER 8u112
 ENV JAVA_HOME /opt/jdk1.8.0_112
 ENV JAVA_BUILD 15
 
-ENV http_proxy ${http_proxy}
-ENV https_proxy ${https_proxy}
-ENV no_proxy ${no_proxy}
-
 ENV PATH $JAVA_HOME/bin:$PATH
 
 # Install Packages

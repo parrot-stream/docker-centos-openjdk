@@ -6,4 +6,4 @@ services:
         build:
             context: .
             dockerfile: Dockerfile
-        image: mcapitanio/centos-java
+        image: parrot/centos-java

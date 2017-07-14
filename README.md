@@ -1,38 +1,37 @@
-# **centos-java**
+# **centos-openjdk**
 ___
 
 ### Description
 
-This image adds Oracle Java Developmt Kit to a base [**Centos**](https://hub.docker.com/r/centos/centos/) Linux distribution.
+This image adds OpenJDK to a base [**Centos**](https://hub.docker.com/r/centos/centos/) Linux distribution.
 
 The *latest* tag of this image is build using the last available Centos Docker image and the last available Oracle JDK.
 You can pull it with:
 
-    docker pull mcapitanio/centos-java
+    docker pull parrotcdc/centos-openjdk
 
 
-You can also find other images based on different Centos / JDK releases, using different tags in the following form:
+You can also find other images based on different OpenJDK releases, using different tags in the following form:
 
-    docker pull mcapitanio/centos-java:[centos-release]-[jdk-release]
+    docker pull parrotcdc/centos-openjdk:[openjdk-release]
 
 
-For example, if you want a Centos 6 release with Oracle JDK release 8u20 you can pull the image with:
+For example, if you want a Centos with OpenJDK release 8 you can pull the image with:
 
-    docker pull mcapitanio/centos-java:6-8u20
+    docker pull parrotcdc/centos-openjdk:8
 
 
 Run with Docker Compose:
 
-    docker-compose run centos-java java -version
+    docker-compose run centos-openjdk java -version
 
 
 Run with Docker run:
 
-    docker run mcapitanio/centos-java java -version
+    docker run parrotcdc/centos-openjdk java -version
 
 
 Available tags:
 
-- Centos 7, Java 8u112 ([7-8u112](https://github.com/mcapitanio/docker-centos-java/blob/7-8u112/Dockerfile), [latest](https://github.com/mcapitanio/docker-centos-java/blob/latest/Dockerfile))
-- Centos 7, Java 8u102 ([7-8u102](https://github.com/mcapitanio/docker-centos-java/blob/7-8u102/Dockerfile))
-- Centos 7, Java 7u80 ([7-7u80](https://github.com/mcapitanio/docker-centos-java/blob/7-7u80/Dockerfile))
+- OpenJDK 8 ([7-8u112](https://github.com/parrotcdc/docker-centos-openjdk/blob/8/Dockerfile), [latest](https://github.com/parrotcdc/docker-centos-openjdk/blob/latest/Dockerfile))
+- OpenJDK 7 ([7-8u102](https://github.com/parrotcdc/docker-centos-openjdk/blob/7/Dockerfile))

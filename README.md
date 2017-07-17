@@ -8,17 +8,17 @@ This image adds [OpenJDK](http://openjdk.java.net/) to a base [**Centos**](https
 The *latest* tag of this image is build using the last available Centos Docker image and the last available Oracle JDK.
 You can pull it with:
 
-    docker pull parrotcdc/centos-openjdk
+    docker pull parrot-stream/centos-openjdk
 
 
 You can also find other images based on different OpenJDK releases, using different tags in the following form:
 
-    docker pull parrotcdc/centos-openjdk:[openjdk-release]
+    docker pull parrot-stream/centos-openjdk:[openjdk-release]
 
 
 For example, if you want a Centos with OpenJDK release 8 you can pull the image with:
 
-    docker pull parrotcdc/centos-openjdk:8
+    docker pull parrot-stream/centos-openjdk:8
 
 
 Run with Docker Compose:
@@ -28,10 +28,10 @@ Run with Docker Compose:
 
 Run with Docker run:
 
-    docker run parrotcdc/centos-openjdk java -version
+    docker run parrot-stream/centos-openjdk java -version
 
 
 Available tags:
 
-- OpenJDK 8 ([8](https://github.com/parrotcdc/docker-centos-openjdk/blob/8/Dockerfile), [latest](https://github.com/parrotcdc/docker-centos-openjdk/blob/latest/Dockerfile))
-- OpenJDK 7 ([7](https://github.com/parrotcdc/docker-centos-openjdk/blob/7/Dockerfile))
+- OpenJDK 8 ([8](https://github.com/parrot-stream/docker-centos-openjdk/blob/8/Dockerfile), [latest](https://github.com/parrot-stream/docker-centos-openjdk/blob/latest/Dockerfile))
+- OpenJDK 7 ([7](https://github.com/parrot-stream/docker-centos-openjdk/blob/7/Dockerfile))

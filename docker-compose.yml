@@ -3,8 +3,7 @@ version: "3"
 services:
 
      centos-openjdk:
-        container_name: centos-openjdk
         build:
             context: .
             dockerfile: Dockerfile
-        image: parrot-stream/centos-openjdk:7
+        image: parrotstream/centos-openjdk:7

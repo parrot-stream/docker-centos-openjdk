@@ -6,4 +6,4 @@ services:
         build:
             context: .
             dockerfile: Dockerfile
-        image: parrotstream/centos-openjdk:latest
+        image: parrotstream/centos-openjdk:9

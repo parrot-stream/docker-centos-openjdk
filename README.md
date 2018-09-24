@@ -33,5 +33,7 @@ Run with Docker run:
 
 Available tags:
 
-- OpenJDK 8 ([8](https://github.com/parrot-stream/docker-centos-openjdk/blob/8/Dockerfile), [latest](https://github.com/parrot-stream/docker-centos-openjdk/blob/latest/Dockerfile))
+
+- OpenJDK 9 ([9](https://github.com/parrot-stream/docker-centos-openjdk/blob/9/Dockerfile), [latest](https://github.com/parrot-stream/docker-centos-openjdk/blob/latest/Dockerfile)
+- OpenJDK 8 ([8](https://github.com/parrot-stream/docker-centos-openjdk/blob/8/Dockerfile))
 - OpenJDK 7 ([7](https://github.com/parrot-stream/docker-centos-openjdk/blob/7/Dockerfile))

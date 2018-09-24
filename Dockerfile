@@ -3,7 +3,7 @@ FROM centos
 MAINTAINER Matteo Capitanio <matteo.capitanio@gmail.com>
 
 ENV JAVA_VER  10
-ENV JAVA_HOME /opt/java-se-$JAVA_VER-ri/jdk-$JAVA_VER/
+ENV JAVA_HOME /opt/jdk-$JAVA_VER/
 
 # Install Packages
 RUN yum update -y; \

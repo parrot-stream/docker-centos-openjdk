@@ -1,9 +1,7 @@
 version: "3"
-
 services:
-
-     centos-openjdk:
-        build:
-            context: .
-            dockerfile: Dockerfile
-        image: parrotstream/centos-openjdk:10
+  centos-openjdk:
+    build:
+      context: .
+      dockerfile: Dockerfile
+  image: parrotstream/centos-openjdk:10

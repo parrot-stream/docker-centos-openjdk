@@ -7,7 +7,7 @@ ENV JAVA_HOME /opt/jdk-$JAVA_VER/
 
 # Install Packages
 RUN yum update -y; \
-    yum install -y wget unzip curl vim python-setuptools; \
+    yum install -y wget unzip curl vim python-setuptools sudo; \
     easy_install supervisor
 RUN wget https://download.java.net/openjdk/jdk${JAVA_VER}/ri/openjdk-${JAVA_VER}+28_linux-x64_bin.tar.gz -O /opt/jdk.tar.gz
 

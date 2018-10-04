@@ -6,7 +6,7 @@ ENV JAVA_HOME /opt/java-se-9-ri/jdk-9/
 
 # Install Packages
 RUN yum update -y; \
-    yum install -y wget unzip curl vim python-setuptools; \
+    yum install -y wget unzip curl vim python-setuptools sudo; \
     easy_install supervisor
 RUN wget https://download.java.net/openjdk/jdk9/ri/jdk-9+181_linux-x64_ri.zip -O /opt/jdk.zip
 
